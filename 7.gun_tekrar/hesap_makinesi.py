@@ -14,7 +14,10 @@ def toplama(sayilar:list):
     print(f"Sayıların toplamı {toplam} 'tır.")
 
 def cikarma(sayilar:list):
-    pass
+    sonuç=0
+    for sayi in sayilar:
+        sonuç=sayi
+        sonuç=sonuç-sayi
 
 def carpma(sayilar):
     pass
