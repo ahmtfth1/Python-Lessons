@@ -5,6 +5,7 @@
 
 # hesap mak. - toplama, çıkarma, çarpma, bölme -> fonk
 # veriler liste olarak gönderilecek
+import time
 
 def toplama(sayilar:list):
     toplam = 0
@@ -14,13 +15,18 @@ def toplama(sayilar:list):
     print(f"Sayıların toplamı {toplam} 'tır.")
 
 def cikarma(sayilar:list):
-    sonuç=0
-    for sayi in sayilar:
-        sonuç=sayi
-        sonuç=sonuç-sayi
+    fark=sayilar[0]
+    for i in range (1, len(sayilar)):
+        fark=fark-sayilar[i]
+
+    print(f"Sayıların farkı {fark} 'tır.")
+    time.sleep(0,5)
+ 
 
 def carpma(sayilar):
     pass
+    
+
 
 def bolme(sayilar):
     pass
@@ -75,7 +81,9 @@ def ana_program():
             break
 
         veriler = veri_girisi()
-        print(k_secim + " falan")
+        print(k_secim + " numararlı işlemi seçtiniz.")
+        time.sleep(0,5)
+
 
         match k_secim:
             case "1":
